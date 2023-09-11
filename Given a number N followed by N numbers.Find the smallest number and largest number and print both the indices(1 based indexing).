@@ -1,0 +1,10 @@
+n=int(input())
+o=list(map(int,input().split()))
+
+a=min(o)
+b=max(o)
+s=[]
+s.append(o.index(a)+1)
+s.append(o.index(b)+1)
+
+print(' '.join(map(str,s)))
