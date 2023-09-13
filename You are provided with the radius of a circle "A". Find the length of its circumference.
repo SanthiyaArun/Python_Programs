@@ -1,0 +1,6 @@
+import math
+A=float(input())
+
+c=2*math.pi*A
+
+print('%.2f' % c)
