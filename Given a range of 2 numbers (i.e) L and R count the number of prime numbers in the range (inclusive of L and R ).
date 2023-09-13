@@ -1,0 +1,16 @@
+def sieve(n):
+    primes = [True] * (n + 1)
+    primes[0] = primes[1] = False
+    for i in range(2, int(n**0.5) + 1):
+        if primes[i]:
+            for j in range(i*i, n + 1, i):
+                primes[j] = False
+    return primes
+
+L, R = map(int, input().split())
+primes = sieve(R)
+count = 0
+for i in range(L, R+1):
+    if primes[i]:
+        count += 1
+print(count)
